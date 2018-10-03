@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Login</title>
+<style>
+	.container-fulid {
+		background-color:#CECEF6
+	}
+	.login-form {
+		width: 400px;
+		margin: 50px auto;
+		background-color:#FFFFFF;
+		padding:5px;
+	}
+	.fa {
+		font-size:20px;
+	}
+	h4 {
+		margin-bottom:10px;
+		padding-bottom:6px;
+		border-bottom:2px solid #E6E6E6;
+	}
+	.input-group-email {
+		background-color:#D8D8D8;
+		width:30px;
+		padding:6px 12px;
+		text-align:center;
+		font-size:14px;
+	}
+</style>
+</head>
+<body>
+<div class="container-fulid">
+	<nav class="navbar navbar-expand-sm bg-light">
+		<a class="navbar-brand" href="#">Auto_HP</a>
+	</nav>
+	<div class="login-form">
+		<form action="/user/login" method="post">
+			<h4><i class="fa fa-user"></i> Login</h4>
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Email Address">
+				<div class="input-group-append">
+					<span class="input-group-email">
+						<i class="fa fa-user"></i>
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
