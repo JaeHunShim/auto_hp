@@ -6,34 +6,9 @@
 <script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="/resources/static/css/login.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Login</title>
-<style>
-	.container-fulid {
-		background-color:#CECEF6
-	}
-	.login-form {
-		width: 400px;
-		margin: 50px auto;
-		background-color:#FFFFFF;
-		padding:5px;
-	}
-	.fa {
-		font-size:20px;
-	}
-	h4 {
-		margin-bottom:10px;
-		padding-bottom:6px;
-		border-bottom:2px solid #E6E6E6;
-	}
-	.input-group-email {
-		background-color:#D8D8D8;
-		width:30px;
-		padding:6px 12px;
-		text-align:center;
-		font-size:14px;
-	}
-</style>
 </head>
 <body>
 <div class="container-fulid">
@@ -46,12 +21,45 @@
 			<div class="input-group mb-3">
 				<input type="text" class="form-control" placeholder="Email Address">
 				<div class="input-group-append">
-					<span class="input-group-email">
+					<span class="input-group-text">
 						<i class="fa fa-user"></i>
 					</span>
 				</div>
 			</div>
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Password">
+				<div class="input-group-append">
+					<span class="input-group-text">
+						<i class="fa fa-lock"></i>
+					</span>
+				</div>
+			</div>
+			<div class="forgot">
+				<a href="/user/fogot/password">
+					<i class="fa fa-unlock"></i>
+					I forget password
+				</a>
+			</div>
+			<div class="login">
+				<button type="submit" class="btn btn-primary">Login</button>
+			</div>
+			<div>
+				<hr>
+			</div>
+			<div class="text-center social-login">
+				<a href="/user/login_face" class="btn btn-primary btn-block">
+					<i class="fa fa-facebook"></i> Sign in <b>Facebook</b>
+				</a>
+				<a href="#" class="btn btn-danger btn-block">
+					<i class="fa fa-google"></i> Sign in <b>Google</b>
+				</a>
+			</div>
 		</form>
+	</div>
+	<div class="text-center">
+		<a href="/user/join">New Member ? Sign Up Go
+			<i class="fa fa-mouse-pointer"></i>
+		</a>	
 	</div>
 </div>
 </body>
