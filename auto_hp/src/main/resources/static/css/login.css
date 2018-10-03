@@ -1,0 +1,39 @@
+body {
+		background-color:#F6D8CE;
+	}
+	.login-form {
+		width: 400px;
+		margin: 50px auto;
+		background-color:#FFFFFF;
+		padding:5px;
+	}
+	.fa {
+		font-size:20px;
+	}
+	h4 {
+		margin-bottom:10px;
+		padding-bottom:6px;
+		border-bottom:2px solid #E6E6E6;
+	}
+	.login {
+		padding:20px;
+		text-align:center;
+	}
+	.or-login {
+		text-align:center;
+		color:#00BFFF;
+	}
+	.or-login-center {
+		text-align:center;
+	}
+	 .social-login .btn {
+        margin: 10px 0;
+        font-size: 15px;
+        text-align: left; 
+        line-height: 24px;       
+    }
+	.social-login .btn i {
+		float: left;
+		margin: 4px 15px  0 5px;
+        min-width: 15px;
+	}
