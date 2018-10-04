@@ -14,4 +14,8 @@ public class UserController {
 	public void login() {
 		
 	}
+	@GetMapping("/signup")
+	public void signUp() {
+		
+	}
 }

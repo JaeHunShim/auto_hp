@@ -1,0 +1,31 @@
+.container {
+	width:auto;
+	max-width:768px;
+	margin:0 auto;
+}
+#z-code {
+	width:200px;
+}
+.main_content{
+	width:460px;
+	margin:0 auto;
+	
+}
+.page-header{
+	margin:0 auto;
+	text-align:center;
+}
+.form-group{
+	width:460px;
+	
+}
+.input-group-text{
+	background-color:white;		
+}
+.join {
+	margin:10px;
+	text-align:center;
+}
+body {
+	background-color:#F6D8CE;
+}

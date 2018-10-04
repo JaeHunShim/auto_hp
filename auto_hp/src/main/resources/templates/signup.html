@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="/resources/static/css/join.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Sign Up</title>
+</head>
+<body>
+<div class="container-fulid">
+	<nav class="navbar navbar-expand-sm bg-light">
+		<a class="navbar-brand" href="#">Auto_HP</a>
+	</nav>
+	<div class="container">
+		<div class="page-header">
+			<h2>Sign Up</h2>
+		</div>
+		<div class="main_content">
+		<form id="join" method="post" action="/user/signup">
+			<div class="form-group">
+				<label class="email">Email</label>
+				<div class="input-group">
+					<input type="email" class="form-control" placeholder="Email">
+					<div class="input-group-append">
+						<button class="btn btn-info">Overap Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="password">Password</label>
+				<div class="input-group">
+					<input type="password" class="form-control" placeholder="Password">
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="password_confirm">Password Reconfirm</label>
+				<div class="input-group">
+					<input type="password" class="form-control" placeholder="Password">
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i class="fa fa-check"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="Nickname">Nickname</label>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Nickname">
+				</div>
+			</div>		
+			<div class="form-group" id="z-code">
+				<label class="z-code">Address</label>
+				<div class="input-group">
+					<input type="text"class="form-control" placeholder="Zip Code" readonly>
+					<div class="input-group-append">
+						<button type="button" class="btn btn-info">Search</button>
+					</div>
+				</div>
+            </div>
+            <div class="form-group">
+				<input type="text" class="form-control" placeholder="Address">
+			</div>		
+            <div class="form-group">
+				<input type="text" class="form-control" placeholder="Detail Address">
+			</div>
+			<div class="form-group">
+				<label class="tel">Tel</label>
+			</div>
+			<div class="join">
+				<button type="submit" class="btn btn-success">Join</button>
+				<button class="btn btn-warning">Cancel</button>
+			</div>			
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
