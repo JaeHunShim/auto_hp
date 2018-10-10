@@ -34,14 +34,16 @@ public class UserController {
 		return "redirect:/main/index";
 	}
 	@GetMapping("/signup")
-	public void signUp() {
+	public String signUp() {
 		
+		return "/user/signup";
 	}
 	//join 처리
 	@PostMapping("/signup")
 	public String postSignup(UserVO userVO) throws Exception {
 		
 		userService.signup(userVO);
+		
 		return "redirect:/login";
 	}
 	
