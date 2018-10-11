@@ -12,8 +12,12 @@ public class IndexController {
 	public void index() {
 		
 	}
-	@GetMapping("/start")
+	@GetMapping("/start/name")
 	public void start() {
+		
+	}
+	@GetMapping("/start/domain")
+	public void domain() {
 		
 	}
 }
