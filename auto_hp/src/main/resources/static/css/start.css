@@ -1,0 +1,51 @@
+	ul {
+		margin-left: auto;
+	}
+	.container {
+		margin: 0 auto;
+	}
+	.step {
+		margin: 0 auto;
+		text-align:center;
+		margin-top:20px;
+	}
+	.progress-bar {
+		width:25%;
+	}
+	.progress {
+		margin:0 auto;
+		margin-top:20px;
+		max-width:500px;
+	}
+	body {
+		background-color:#CEECF5;
+	}
+	.card {
+		margin:0 auto;
+		max-width:500px;
+		padding:24px;
+	}
+	
+	.card_sub {
+		margin:0 auto;
+		max-width:700px;
+	}
+	.header {
+		margin:16px 0px 24px 0;
+	}
+	.form_submit {
+		margin:0 auto;
+		text-align:center;
+		padding:24px;
+	}
+	.content {
+		margin:0 auto;
+	}
+	
+	.domain_address {
+		margin:0 auto;
+		margin-top:20px;
+		padding :16px 24px;
+		background-color:white;
+		width:700px;
+	}
