@@ -20,4 +20,8 @@ public class IndexController {
 	public void domain() {
 		
 	}
+	@GetMapping("/start/plan")
+	public void plan() {
+		
+	}
 }

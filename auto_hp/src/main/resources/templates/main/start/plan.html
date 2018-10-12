@@ -2,16 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="/resources/static/css/start.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Domain</title>
+<title>Plan</title>
+<style>
+	.content {
+		margin:0 auto;
+	}
+	ul {
+		margin-left: auto;
+	}
+	.progress-bar {
+		width:25%;
+	}
+	.progress {
+		margin:0 auto;
+		margin-top:20px;
+		max-width:500px;
+	}
+	.step {
+		margin: 0 auto;
+		text-align:center;
+		margin-top:20px;
+	}
+	body {
+		background-color:#CEECF5;
+	}
+	.header {
+		margin:16px 0px 24px 0;
+	}
+</style>
 </head>
 <body>
-	<div class="container-fulid">
+<div class="container-fulid">
 		<nav class="navbar navbar-expand-sm bg-light">
 			<a class="navbar-brand" href="#">Auto_HP</a>
 			<ul class="navbar-nav">
@@ -26,44 +51,16 @@
 				<span><strong>2단계</strong></span>
 				<div class="step_header">
 					<h1>Site Domain Make</h1>
-					<p>사이트 도메인을 지정해주세요</p>
+					<p>원하시는 요금제를 선택해주세요</p>
 				</div>
 			</div>
 			<div class="progress">
 				<div class="progress-bar progress-bar-striped bg-info progress-bar-animated">1단계</div>
 				<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated">2단계</div>
-			</div>
-		</div>
-		<div class="content">
-			<div class="form-wrapper">
-				<form method="get" action="/main/start/plan">
-					<div class="card_sub">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text">
-									<i class="fa fa-search"></i>
-								</span>
-							</div>
-							<input type="text" class="form-control">
-						</div>
-					</div>
-					<div class="domain_detail">
-						<div class="d-flex flex-column">
-							<div class="d-flex flex-row">
-								<div class="d-flex justify-content-between domain_address">
-									<span>Domain Name</span>
-									<div class="domain_price">
-										<span>Domain Price</span>
-									</div>
-									<button type="submit" class="btn btn-info">Select</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+				<div class="progress-bar progress-bar-striped bg-success progress-bar-animated">3단계</div>
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
 </body>
 </html>
