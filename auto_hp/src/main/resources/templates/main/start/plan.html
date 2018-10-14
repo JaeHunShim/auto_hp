@@ -33,6 +33,22 @@
 	.header {
 		margin:16px 0px 24px 0;
 	}
+	.plan-header {
+		padding: 12px 24px 0 15px;
+    	border-bottom: solid 2px #c8d7e1;
+    	text-align:center;
+	}
+	.plan{
+		background-color:#fff;
+		max-width:40px;
+		margin:0px;
+		border-top-color:white;
+		
+	}
+	.plan-header-select {
+		padding: 12px 24px 0 15px;
+    	text-align:center;
+	}
 </style>
 </head>
 <body>
@@ -50,7 +66,7 @@
 			<div class="step">
 				<span><strong>2단계</strong></span>
 				<div class="step_header">
-					<h1>Site Domain Make</h1>
+					<h1>Site Price</h1>
 					<p>원하시는 요금제를 선택해주세요</p>
 				</div>
 			</div>
@@ -59,6 +75,46 @@
 				<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated">2단계</div>
 				<div class="progress-bar progress-bar-striped bg-success progress-bar-animated">3단계</div>
 			</div>
+		</div>
+		<div class="plan_content">
+			<table class="table table-borderless">
+				<tbody>
+					<tr>
+						<td class="plan" style="border-right: 12px solid #CEECF5;">
+							<div class="plan-header">
+								<div class="plan-header-text">
+									<h4>Free</h4>								
+								</div>
+								<div class="plan-header-price">
+									<span>Teach & Practice</span>
+								</div>
+							</div>
+						</td>
+						<td class="plan">
+							<div class="plan-header">
+								<div class="plan-header-text">
+									<h4>Pay</h4>								
+								</div>
+								<div class="plan-header-price">
+									<span>Individual & Hobby</span>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="plan" style="border-right: 12px solid #CEECF5;">
+							<div class="plan-header-select">
+								<button type="submit" class="btn btn-success">Free Start</button>
+							</div>
+						</td>
+						<td class="plan">
+							<div class="plan-header-select">
+								<button type="submit" class="btn btn-info">Pay Start</button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
