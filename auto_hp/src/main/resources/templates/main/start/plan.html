@@ -5,50 +5,32 @@
 <script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="/resources/static/css/start.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Plan</title>
 <style>
-	.content {
-		margin:0 auto;
+	table {
+		table-layout:fixed;
 	}
-	ul {
-		margin-left: auto;
-	}
-	.progress-bar {
-		width:25%;
-	}
-	.progress {
-		margin:0 auto;
-		margin-top:20px;
-		max-width:500px;
-	}
-	.step {
-		margin: 0 auto;
-		text-align:center;
-		margin-top:20px;
-	}
-	body {
-		background-color:#CEECF5;
-	}
-	.header {
-		margin:16px 0px 24px 0;
-	}
-	.plan-header {
-		padding: 12px 24px 0 15px;
-    	border-bottom: solid 2px #c8d7e1;
-    	text-align:center;
-	}
-	.plan{
+	td {
 		background-color:#fff;
-		max-width:40px;
-		margin:0px;
-		border-top-color:white;
-		
+		border-top:1px solid #fff;
+		border-bottom:1px solid #fff;
+		border-left:10px solid #CEECF5;
+		border-right:10px solid #CEECF5;
 	}
-	.plan-header-select {
-		padding: 12px 24px 0 15px;
-    	text-align:center;
+	.plan-header-free{
+		padding:2px;
+		border-bottom: 2px solid #F7FE2E;
 	}
+	.plan-header-pay{
+		padding:2px;
+		border-bottom: 2px solid #FF0040;
+	}
+	.fa{
+		color:#00FF40;
+	}
+
 </style>
 </head>
 <body>
@@ -62,60 +44,94 @@
 			</ul>
 		</nav>
 	<div class="container">
-		<div class="header">
-			<div class="step">
-				<span><strong>2단계</strong></span>
-				<div class="step_header">
-					<h1>Site Price</h1>
-					<p>원하시는 요금제를 선택해주세요</p>
+		<form method="get" action="/login">
+			<div class="header">
+				<div class="step">
+					<span><strong>2단계</strong></span>
+					<div class="step_header">
+						<h1>Site Price</h1>
+						<p>원하시는 요금제를 선택해주세요</p>
+					</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped bg-info progress-bar-animated">1단계</div>
+					<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated">2단계</div>
+					<div class="progress-bar progress-bar-striped bg-success progress-bar-animated">3단계</div>
 				</div>
 			</div>
-			<div class="progress">
-				<div class="progress-bar progress-bar-striped bg-info progress-bar-animated">1단계</div>
-				<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated">2단계</div>
-				<div class="progress-bar progress-bar-striped bg-success progress-bar-animated">3단계</div>
+			<div class="plan_content">
+				<table class="table" id="table">
+					<tbody class="text-center">
+						<tr>
+							<td class="plan">
+								<div class="plan-header-free">
+									<div class="plan-header-text">
+										<h4>Free</h4>								
+									</div>
+									<div class="plan-header-price">
+										<span>Teach & Practice</span>
+									</div>
+								</div>
+							</td>
+							<td class="plan">
+								<div class="plan-header-pay">
+									<div class="plan-header-text">
+										<h4>Pay</h4>								
+									</div>
+									<div class="plan-header-price">
+										<span>Individual & Hobby</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="plan">
+								<div class="plan-header-button">
+									<button type="submit" class="btn btn-success">Free Start</button>
+								</div>
+							</td>
+							<td class="plan">
+								<div class="plan-header-button">
+									<button type="submit" class="btn btn-info">Pay Start</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="plan">
+								<div class="plan-support">
+									<div class="plan-support-text">
+										<span id="support"><i class="fa fa-check"></i>Free Template</span>
+									</div>
+								</div>
+							</td>
+							<td class="plan">
+								<div class="plan-support">
+									<div class="plan-support-text">
+										<span><i class="fa fa-check"></i>Free Domain</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="plan">
+								<div class="plan-support">
+									<div class="plan-support-text">
+										<span><i class="fa fa-check"></i>Community Support</span>
+									</div>
+								</div>
+							</td>
+							<td class="plan">
+								<div class="plan-support">
+									<div class="plan-support-text">
+										<span><i class="fa fa-check"></i></span>All Free
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-		</div>
-		<div class="plan_content">
-			<table class="table table-borderless">
-				<tbody>
-					<tr>
-						<td class="plan" style="border-right: 12px solid #CEECF5;">
-							<div class="plan-header">
-								<div class="plan-header-text">
-									<h4>Free</h4>								
-								</div>
-								<div class="plan-header-price">
-									<span>Teach & Practice</span>
-								</div>
-							</div>
-						</td>
-						<td class="plan">
-							<div class="plan-header">
-								<div class="plan-header-text">
-									<h4>Pay</h4>								
-								</div>
-								<div class="plan-header-price">
-									<span>Individual & Hobby</span>
-								</div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="plan" style="border-right: 12px solid #CEECF5;">
-							<div class="plan-header-select">
-								<button type="submit" class="btn btn-success">Free Start</button>
-							</div>
-						</td>
-						<td class="plan">
-							<div class="plan-header-select">
-								<button type="submit" class="btn btn-info">Pay Start</button>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+		</form>
 	</div>
 </div>
 </body>

@@ -1,3 +1,4 @@
+	@charset "utf-8";
 	ul {
 		margin-left: auto;
 	}
@@ -25,7 +26,6 @@
 		max-width:500px;
 		padding:24px;
 	}
-	
 	.card_sub {
 		margin:0 auto;
 		max-width:700px;
@@ -41,7 +41,6 @@
 	.content {
 		margin:0 auto;
 	}
-	
 	.domain_address {
 		margin:0 auto;
 		margin-top:20px;
