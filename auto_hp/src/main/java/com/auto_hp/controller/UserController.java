@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.auto_hp.domain.UserVO;
-import com.auto_hp.service.UserService;
+import com.auto_hp.service.UserServiceImpl;
 
 @Controller
 public class UserController {
 	
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
 
 	
 	@GetMapping("/")
@@ -31,7 +31,7 @@ public class UserController {
 		
 		model.addAttribute("userVO",userService.login(userVO));
 		
-		return "redirect:/main/index";
+		return "redirect:/view/myhome";
 	}
 	@GetMapping("/signup")
 	public String signUp() {

@@ -35,19 +35,20 @@
 		</div>
 		<div class="content">
 			<div class="form-wrapper">
-				<form method="get" action="/main/start/domain">
+				<form method="post" th:action="@{/main/start/name}">
 					<div class="card">
 						<div class="form-group">
 							<label for="site_name"><strong>Site Name</strong></label>
-							<input type="text" class="form-control" placeholder="ex:naver , google ,myhome">
+							<input type="text" name="site_name"class="form-control" placeholder="ex:naver , google ,myhome">
 						</div>
 						<div class="form-group">
 							<label for="site_perpose"><strong>Site Perpose</strong></label>
-							<input type="text" class="form-control" placeholder="ex:연습 , 홈페이지제작..">
+							<input type="text" name="site_perpose" class="form-control" placeholder="ex:연습 , 홈페이지제작..">
 						</div>
 					</div>
 					<div class="form_submit">
-					<button type="submit" class="btn btn-warning">Next</button>
+					<button type="submit" class="btn btn-info">Next</button>
+					<a href="/main/index" class="btn btn-warning"></a>
 					</div>
 				</form>
 			</div>
