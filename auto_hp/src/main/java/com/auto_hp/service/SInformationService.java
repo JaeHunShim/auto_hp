@@ -4,5 +4,7 @@ import com.auto_hp.domain.SiteInformation;
 
 public interface SInformationService {
 	
-	public SiteInformation domainName(SiteInformation s_Info) throws Exception;
+	public SiteInformation siteName(SiteInformation s_Info) throws Exception;
+	
+	public SiteInformation domainName(SiteInformation sInfo) throws Exception;
 }

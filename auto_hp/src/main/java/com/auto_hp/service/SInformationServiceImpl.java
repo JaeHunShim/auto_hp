@@ -10,7 +10,7 @@ public class SInformationServiceImpl implements SInformationService{
 	
 	
 	@Override
-	public SiteInformation domainName(SiteInformation s_Info) throws Exception {
+	public SiteInformation siteName(SiteInformation s_Info) throws Exception {
 		
 		SiteInformation sInfo = new SiteInformation();
 		
@@ -19,4 +19,16 @@ public class SInformationServiceImpl implements SInformationService{
 		
 		return sInfo;
 	}
+
+	@Override
+	public SiteInformation domainName(SiteInformation sInfo) throws Exception {
+		
+		SiteInformation info = new SiteInformation();
+		
+		info.setDomain_name(sInfo.getDomain_name()+".com");
+		System.out.println("도메인 이름 " + info.getDomain_name() );
+		
+		return info;
+	}
+
 }

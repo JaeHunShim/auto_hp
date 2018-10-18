@@ -8,4 +8,5 @@ public class SiteInformation {
 	private String user_email;
 	private String site_name;
 	private String site_perpose;
+	private String domain_name;
 }
