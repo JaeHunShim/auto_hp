@@ -24,11 +24,12 @@ public class IndexController {
 	@GetMapping("/start/name")
 	public void start() throws Exception {
 		
-	}	
+	}
+	//name.html 처리
 	@PostMapping("/start/name")
 	public String startPost(SiteInformation s_info,Model model) throws Exception {
 		
-		model.addAttribute("s_Info",SInfoService.domainName(s_info));
+		model.addAttribute("s_info",SInfoService.siteName(s_info));
 		
 		return "/main/start/domain";
 	
