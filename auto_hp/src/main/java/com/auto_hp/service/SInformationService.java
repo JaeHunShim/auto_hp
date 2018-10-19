@@ -1,3 +1,9 @@
+/**
+ * @author: 심재훈
+ * @date:2018-10-05
+ * @filename:SInformationService.java
+ * @function:SInformationServiceImpl.java interface
+ */
 package com.auto_hp.service;
 
 import com.auto_hp.domain.SiteInformation;

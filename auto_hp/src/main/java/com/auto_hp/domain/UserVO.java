@@ -1,3 +1,10 @@
+/**
+ * @author: 심재훈
+ * @date:2018-10-5
+ * @filename:UserVO
+ * @function: user정보에 대한 VO객체 
+ * @version:0.0.1
+ */
 package com.auto_hp.domain;
 
 import java.util.Date;

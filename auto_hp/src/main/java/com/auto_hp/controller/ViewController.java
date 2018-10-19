@@ -1,3 +1,9 @@
+/**
+ * @author: 심재훈
+ * @date:2018-10-18
+ * @filename:ViewController.java
+ * 
+ */
 package com.auto_hp.controller;
 
 import org.springframework.stereotype.Controller;

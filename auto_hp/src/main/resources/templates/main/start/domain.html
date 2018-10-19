@@ -4,31 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="/resources/static/js/main/domain.js"></script>
 <script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="/resources/static/css/start.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Domain</title>
-<script>
-$(document).ready(function(){
-	$("#domain_name").keyup(function(){
-		var domain_name= $(this).val();
-		$.ajax({
-			url:"/main/start/domain_name",
-			type:"post",
-			headers:{
-				'Content-Type':'application/json'
-			},
-			data:JSON.stringify({
-				domain_name:domain_name
-			}),
-			success:function(data){
-				$("#domain_n").text(data.domain_name);
-			}
-		});
-	});
-});
-</script>
 </head>
 <body>
 	<div class="container-fulid">
