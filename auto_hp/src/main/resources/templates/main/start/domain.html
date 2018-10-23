@@ -37,9 +37,9 @@
 		</div>
 		<div class="content">
 			<div class="form-wrapper">
-				<form method="post" action="/main/start/name">
+				<form method="get" action="/main/start/plan">
 					<input type="hidden" name="site_name" th:value="${s_info.site_name}">
-					<input type="hidden" name="site_perpose" th:value="${s_info.site_perpose}">
+					<input type="hidden" name="site_purpose" th:value="${s_info.site_purpose}">
 					<div class="card_sub">
 						<div class="input-group">
 							<div class="input-group-prepend" style="backgrond-color:white">
@@ -51,17 +51,7 @@
 						</div>
 					</div>
 					<div class="domain_detail">
-						<div class="d-flex flex-column">
-							<div class="d-flex flex-row">
-								<div class="d-flex justify-content-between domain_address">
-									<span id="domain_n"></span>
-									<div class="domain_price">
-										<span id="domain_price">Domain Price</span>
-									</div>
-									<button type="submit" class="btn btn-info">Select</button>
-								</div>
-							</div>
-						</div>
+						<!-- domain name add (ajax input) -->
 					</div>
 				</form>
 			</div>

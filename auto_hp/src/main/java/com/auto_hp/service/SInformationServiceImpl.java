@@ -6,12 +6,20 @@
 package com.auto_hp.service;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.auto_hp.domain.SiteInformation;
+import com.auto_hp.mapper.InfoMapper;
 
 @Service
 public class SInformationServiceImpl implements SInformationService{
+	
+	@Autowired
+	private InfoMapper infoMapper;
 	/**
 	 * @author: 심재훈
 	 * @date:2018-10-17
@@ -36,19 +44,25 @@ public class SInformationServiceImpl implements SInformationService{
 	 * @date:2018-10-17
 	 * @method: doaminName
 	 * @param : SiteInformation 객체
-	 * @return :SiteInformation 객체
+	 * @return :List<SiteInformation> 객체
 	 * @function: 도메인이름을 만드는 처리 
 	 * @version:0.0.1
 	 */
 	@Override
-	public SiteInformation domainName(SiteInformation sInfo) throws Exception {
+	public List<SiteInformation> domainName(SiteInformation sInfo) throws Exception {
 		
-		SiteInformation info = new SiteInformation();
+		List<SiteInformation> infoList = new ArrayList<SiteInformation>();
 		
-		info.setDomain_name(sInfo.getDomain_name()+".com");
-		System.out.println("도메인 이름 " + info.getDomain_name() );
+		String[] dotList = {"Free.com","Pay.net"};
+		String[] payList = {"무료", "유료"};
 		
-		return info;
+		for(int i=0; i<dotList.length; i++) {
+			SiteInformation info = new SiteInformation();
+			info.setDomain_name(sInfo.getDomain_name()+dotList[i]);
+			info.setDomain_price(payList[i]);
+			infoList.add(info);
+		}
+		System.out.println("list정보:" + infoList);
+		return infoList;
 	}
-
 }

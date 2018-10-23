@@ -17,5 +17,5 @@ public class SiteInformation {
 	private String site_purpose;
 	private String domain_name;
 	private String domain_price;
-	private String url;
+	
 }

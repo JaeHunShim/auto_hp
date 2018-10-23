@@ -5,6 +5,8 @@
  */
 package com.auto_hp.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,22 +26,20 @@ public class ViewRestController {
 	 * @date:2018-10-18
 	 * @method:domainName
 	 * @param :json 형태
-	 * @return :entity 객체 (Restful)
+	 * @return :entity(List) 객체 (Restful)
 	 * @function : domain이름에 관한 데이터를 비동기식으로 처리 
 	 * @version:0.0.1
 	 */
 	@PostMapping("/main/start/domain_name")
-	public ResponseEntity<?> domainName(@RequestBody SiteInformation sInfo) throws Exception{
+	public ResponseEntity<List<SiteInformation>> domainName(@RequestBody SiteInformation sInfo) throws Exception{
 		
-		ResponseEntity<?> entity = null;
+		ResponseEntity<List<SiteInformation>> entity = null;
 
 		try {
-			SiteInformation info = new SiteInformation();
-			info = SInforService.domainName(sInfo);
-			entity = new ResponseEntity<SiteInformation>(info,HttpStatus.OK);
+			entity = new ResponseEntity<List<SiteInformation>>(SInforService.domainName(sInfo),HttpStatus.OK);
 		}catch(Exception e) {
 			e.printStackTrace();
-			entity = new ResponseEntity<String>(e.getMessage(),HttpStatus.BAD_REQUEST);
+			entity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		return entity;
 	}
