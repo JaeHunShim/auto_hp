@@ -5,11 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src ="/resources/static/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="/resources/static/js/bootstrap/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 <link type="text/css" rel="stylesheet" href="/resources/static/css/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="/resources/static/css/style.css">
 <title>View</title>
+<style>
+.wrapper {
+    display: flex;
+}
+#sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+.fa {
+	margin-right:12px;
+}
+.rounded-circle {
+	width:50px; 
+	height:40px
+}
+</style>
 </head>
 <body>
+<div class="container-fulid">
+	<div class="layout">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<a class="navbar-brand" href="#">Auto_HP</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidecollpase">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- sidebar close & open start-->
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+			<!-- sidebar close & open  end-->
+		</nav>
+	</div>
+	<div class="container-fulid">
+		<div class="wrapper">
+			<nav id="sidebar">
+				<div class="sidebar-header site_content">
+					<div class="row">
+						<a class="site_content navbar-brand">
+							<img class="rounded-circle" src="/resources/static/img/profiles/가을.jpg">
+						</a>
+						<div>Example
+							<div>Example.com</div>
+						</div>
+					</div>
+				</div>
+				<ul class="list-unstyled componentes">
+					<li>
+						<a href="#"><i class="fa fa-desktop"></i><span>Site See</span></a>
+					</li>
+					<li>
+                		<a href="#"><i class="fa fa-bar-chart"></i><span>Statistics</span></a>
+            		</li>
+            		<li>
+                		<a href="#"><i class="fa fa-credit-card"></i><span>Payment</span></a>
+            		</li>
+            		<li>
+            			<a style="background:#CEECF5;"><strong>Manegement</strong></a>
+            		</li>
+            		<li>
+                		<a href="#"><i class="fa fa-file-text-o"></i><span>My Page</span></a>
+                		
+            		</li>
+            		<li>
+               			<a href="#mypage" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-file-photo-o"></i><span>Media</span></a>
+               			<ul class="collapse list-unstyled" id="mypage">
+               				<li>
+               					<a href="#">My Home Move</a>
+               				</li>
+               				<li>
+               					<a href="#">Add</a>
+               				</li>
+               			</ul>
+            		</li>
+            		<li>
+               			<a href="#blog" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-list"></i><span>Blog</span></a>
+               			<ul class="collapse list-unstyled" id="blog">
+               				<li>
+               					<a href="#">Blog Move</a>
+               				</li>
+               				<li>
+               					<a href="#">Add</a>
+               				</li>
+               			</ul>
+            		</li>
+            		<!-- <li>
+                		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                		<ul class="collapse list-unstyled" id="pageSubmenu">
+                    		<li>
+                        		<a href="#">Page 1</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Page 2</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Page 3</a>
+                    		</li>
+                		</ul>
+            		</li> -->
+           			<li>
+                		<a href="#">Portfolio</a>
+            		</li>
+            		<li>
+               			<a href="#">Contact</a>
+            		</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<script>
+$(document).ready(function () {
 
+    $("#sidebar").mCustomScrollbar({
+         theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+});
+</script>
 </body>
 </html>
